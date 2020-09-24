@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_below="@+id/ll_head"
+    android:layout_marginTop="-40dp"
+    android:paddingBottom="@dimen/dp_5"
+    android:gravity="center"
+    android:orientation="vertical">
+    <android.support.v7.widget.CardView
+        android:id="@+id/index_card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardElevation="3dp"
+       >
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="328dp"
+                android:layout_height="@dimen/dp_120"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/shape_linearlayout"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btn_search"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableTop="@mipmap/ic_fastscan"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:gravity="top|center"
+                    android:text="快速扫码"
+                    android:textSize="@dimen/sp_13" />
+
+                <Button
+                    android:id="@+id/btn_current"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableTop="@mipmap/ic_currenttask"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:gravity="top|center"
+                    android:text="当前盘查"
+                    android:textSize="@dimen/sp_13" />
+
+                <Button
+                    android:id="@+id/btn_history"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableTop="@mipmap/ic_history"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:gravity="top|center"
+                    android:text="历史记录"
+                    android:textSize="@dimen/sp_13" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

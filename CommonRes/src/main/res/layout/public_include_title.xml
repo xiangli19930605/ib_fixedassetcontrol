@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/public_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_69"
+    android:background="@color/transparent"
+    android:paddingTop="@dimen/dp_20"
+    app:contentInsetStart="0dp"
+    app:layout_collapseMode="pin"
+    app:title="当前盘查"
+    app:titleTextColor="@color/white">
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <RelativeLayout
+            android:id="@+id/public_toolbar_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/public_mar_left_10dp"
+                android:layout_marginRight="@dimen/public_mar_right_10dp"
+                android:src="@drawable/public_ic_arrow_back_white_24dp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/public_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/public_white"
+            android:textSize="@dimen/public_font_18sp"
+            tools:text="当前盘查" />
+
+        <ImageView
+            android:id="@+id/public_toolbar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/public_mar_left_10dp"
+            android:layout_marginRight="@dimen/public_mar_right_10dp"
+            android:src="@drawable/ic_search_toolbar" />
+
+    <!--</LinearLayout>-->
+
+
+</android.support.v7.widget.Toolbar>

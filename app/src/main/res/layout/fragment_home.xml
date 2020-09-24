@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:srlAccentColor="@android:color/white"
+        app:srlEnableHeaderTranslationContent="false"
+        app:srlEnableLoadMore="false"
+        app:srlPrimaryColor="@color/colorPrimary">
+
+        <com.scwang.smartrefresh.header.MaterialHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg"
+                android:gravity="center">
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:id="@+id/collapsing_toolbar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:collapsedTitleTextAppearance="@style/ToolBarTitleText"
+                    app:contentScrim="@color/public_colorPrimary"
+                    app:expandedTitleMarginEnd="48dp"
+                    app:expandedTitleMarginStart="48dp"
+                    app:expandedTitleTextAppearance="@style/transparentText"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <include layout="@layout/layout_home_title" />
+
+
+                    <android.support.v7.widget.Toolbar
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_72"
+                        android:paddingTop="@dimen/dp_20"
+                        app:layout_collapseMode="pin"
+                        app:title="固定资产盘点手持机" />
+
+                </android.support.design.widget.CollapsingToolbarLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_45"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@color/bg"
+                    android:drawableLeft="@mipmap/ic_home_tips"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:gravity="center"
+                    android:text="您有一条盘点任务正在进行..."
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/sp_13"
+                    android:visibility="gone"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.7" />
+
+
+            </android.support.design.widget.AppBarLayout>
+
+            <!--包含可滑动的布局内容(RecyclerView,NestedScrollView,不支持ListView，ScrollView)
+            必须要设置app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            属性来告知CoordinatorLayout该组件是带有滑动行为的组件,
+            然后CoordinatorLayout在接受到滑动时会通知AppBarLayout中可滑动的Toolbar可以滑出屏幕-->
+
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/nsv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg"
+                android:fillViewport="true"
+                android:scrollbars="none"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:nestedScrollingEnabled="false"
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_45"
+                        android:layout_gravity="center"
+                        android:background="@color/bg"
+                        android:drawableRight="@mipmap/ic_smile"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:gravity="center"
+                        android:text="没有更多"
+                        android:textColor="#b8ddff"
+                        android:textSize="@dimen/sp_14"
+                        app:layout_collapseMode="parallax"
+                        app:layout_collapseParallaxMultiplier="0.7" />
+                </LinearLayout>
+
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+
+        <com.scwang.smartrefresh.header.TaurusHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</FrameLayout>

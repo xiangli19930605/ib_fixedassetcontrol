@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_content"
+    android:layout_marginBottom="@dimen/dp_2"
+    android:background="@drawable/shape_linearlayout"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/stv_id"
+            style="@style/TextView_middle"
+            android:layout_weight="1"
+            stv:sCenterTextString="PC主机"
+            stv:sLeftTextString="" />
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_10"
+            android:drawableLeft="@mipmap/ic_gantan"
+            android:drawablePadding="@dimen/dp_10"
+            android:text="未盘点"
+            android:textColor="#fe0101" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/layout_asset_edit" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_expand"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_24">
+
+            <ImageView
+                android:id="@+id/img_arrow"
+                android:layout_width="@dimen/dp_14"
+                android:layout_height="@dimen/dp_14"
+                android:src="@mipmap/ic_arrow_down"
+                 />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

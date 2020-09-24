@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    android:orientation="vertical">
+
+    <com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout
+        android:id="@+id/es"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:layout_marginRight="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:background="#00000000"
+        app:contentView="@+id/content"
+        app:rightMenuView="@+id/right">
+        <android.support.v7.widget.CardView
+            android:id="@+id/content"
+            android:background="@drawable/shape_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/dp_3"
+            android:layout_height="wrap_content"
+            app:cardElevation="3dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/layout_task" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_35"
+                android:background="@android:color/transparent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+
+                    <com.allen.library.SuperTextView
+                        android:id="@+id/btn_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        stv:sCenterTextString="上传结果"
+                        stv:sCenterTvDrawableLeft="@mipmap/ic_upload"
+                        stv:sShapeCornersBottomLeftRadius="8dp"
+                        stv:sShapeSelectorPressedColor="@color/gray"
+                        stv:sShapeStrokeWidth="0.2dp"
+                        stv:sUseShape="true" />
+
+                    <View
+                        android:id="@+id/btn_line"
+                        style="@style/VerticalLine" />
+
+
+                    <com.allen.library.SuperTextView
+                        android:id="@+id/btn_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        stv:sCenterTextString="转历史记录"
+                        stv:sCenterTvDrawableLeft="@mipmap/ic_to_history"
+                        stv:sShapeCornersBottomRightRadius="8dp"
+                        stv:sShapeSelectorPressedColor="@color/gray"
+                        stv:sShapeStrokeWidth="0.2dp"
+                        stv:sUseShape="true" />
+                    <!--   stv:sShapeStrokeColor="@color/colorAccent"-->
+                </LinearLayout>
+
+                <View style="@style/HorizontalLine" />
+            </RelativeLayout>
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/right"
+            android:layout_width="@dimen/dp_90"
+            android:layout_marginTop="@dimen/dp_3"
+            android:layout_marginBottom="@dimen/dp_3"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_linearlayout_right"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/right_menu_1"
+                android:layout_width="@dimen/dp_33"
+                android:layout_height="@dimen/dp_33"
+                android:background="@mipmap/ic_del"
+                android:gravity="center"
+                android:padding="20dp" />
+
+
+        </LinearLayout>
+    </com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>
+</LinearLayout>

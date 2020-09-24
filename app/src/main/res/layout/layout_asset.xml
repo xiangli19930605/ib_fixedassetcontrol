@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/stv_typeName"
+            style="@style/TextView_commom"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            stv:sCenterTextString=""
+            stv:sLeftTextString="资产种类：" />
+
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/stv_remark"
+            style="@style/TextView_commom"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            stv:sCenterTextString=""
+            stv:sCenterTvDrawableLeft="@mipmap/ic_edit"
+            stv:sLeftTextString="备        注：" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/stv_brand"
+            style="@style/TextView_commom"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            stv:sCenterTextString=""
+            stv:sLeftTextString="品        牌：" />
+
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/stv_spec"
+            style="@style/TextView_commom"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            stv:sCenterTextString=""
+            stv:sLeftTextString="型        号：" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/stv_location"
+            style="@style/TextView_commom"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            stv:sCenterTextString=""
+            stv:sLeftTextString="资产位置：" />
+
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/stv_checkState"
+            style="@style/TextView_commom"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            stv:sCenterTextString=""
+            stv:sLeftTextString="资产状态:" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/stv_belongName"
+            style="@style/TextView_commom"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            stv:sCenterTextString=""
+            stv:sLeftTextString="使用/管理部门：" />
+
+
+        <com.allen.library.SuperTextView
+            android:id="@+id/stv_cueUser"
+            style="@style/TextView_commom"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            stv:sCenterTextString=""
+            stv:sLeftTextString="责  任  人:" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="bg">#6C6C6C</color>
+    <color name="action_bar">#37889F</color>
+    <color name="sarch_bar">#37889F</color>
+</resources>

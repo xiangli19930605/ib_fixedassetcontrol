@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_weight="1"
+    android:layout_height="@dimen/dp_28"
+    android:background="@drawable/shape_search"
+  >
+
+        <EditText
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:id="@+id/search_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:background="@null"
+            android:drawableLeft="@mipmap/ic_search_toolbar"
+            android:drawablePadding="@dimen/dp_10"
+            android:hint="@string/search_tint"
+            android:inputType="text"
+            android:labelFor="@id/search_edit"
+            android:paddingEnd="@dimen/dp_1"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
+            android:textCursorDrawable="@drawable/shape_cursor"
+            android:textSize="@dimen/sp_12" />
+
+        <ImageView
+            android:id="@+id/img_del"
+            android:layout_width="@dimen/dp_14"
+            android:layout_height="@dimen/dp_14"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/dp_8"
+            android:src="@mipmap/ic_search_del" />
+
+
+</LinearLayout>

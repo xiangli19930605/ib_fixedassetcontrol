@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <color name="colorPrimary">#0039e1</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBackground">#EEEEEE</color>
+    <color name="colorCard">#FFFFFF</color>
+    <color name="colorText">#2C2C2C</color>
+    <color name="colorLogo">#FED530</color>
+    <color name="delete_text">#cccccc</color>
+
+
+    <color name="theme">@color/blue</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#BBBBBB</color>
+    <color name="red">#DC143C</color>
+    <color name="blue">#0099FF</color>
+    <color name="black">#000000</color>
+    <color name="orange">#FFA82E</color>
+    <color name="bg">#eeeff3</color>
+    <color name="yellow">#ff8000</color>
+    <color name="light_white">#eeeeee</color>
+    <color name="light_blue">#E1FFFF</color>
+    <color name="light_yellow">#F0E68C</color>
+    <color name="light_green">#7FFF00</color>
+    <color name="light_red">#e26d2e</color>
+    <color name="light_deep_red">#f9382a</color>
+    <color name="deep_red">#dc3b1f</color>
+
+    <color name="setting_text">#5b5d5c</color>
+    <color name="tab_bac">#049486</color>
+    <color name="action_bar">#0099FF</color>
+    <color name="sarch_bar">#FFFFFF</color>
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>

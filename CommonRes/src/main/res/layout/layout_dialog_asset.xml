@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginTop="@dimen/dp_7"
+            android:background="@drawable/corners_grey_shape"
+            android:gravity="center"
+            android:text="46486468"
+            android:id="@+id/tv_assets"
+            android:textSize="@dimen/sp_18" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:text="资产编码"
+            android:textColor="#808080"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="@dimen/dp_10">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/dp_50"-->
+            <!--android:layout_marginTop="@dimen/dp_7"-->
+            <!--android:background="@drawable/corners_grey_shape"-->
+            <!--android:gravity="center"-->
+            <!--android:text="46486468"-->
+            <!--android:id="@+id/tv_assetName"-->
+            <!--android:textSize="@dimen/sp_18" />-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:background="@color/white"-->
+            <!--android:text="资产名称"-->
+            <!--android:textColor="#808080"-->
+            <!--android:textSize="@dimen/sp_14" />-->
+    <!--</RelativeLayout>-->
+
+
+</LinearLayout>
