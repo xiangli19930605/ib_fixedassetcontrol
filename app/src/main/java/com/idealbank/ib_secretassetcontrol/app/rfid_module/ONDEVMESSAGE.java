@@ -27,15 +27,14 @@ public class ONDEVMESSAGE implements rfid_interface.OnReadMessage {
                 String originTagid = json_data.getString("tagid");//初始的ID
                 String tagid;
                 String  type;//类型 fe:院内资产 ff:车辆标签 fc:院外资产
+                //                  研究院内涉密资产标签 = "fe";研究院内普通资产标签= "fd"; 外来物品电子标签 = "fc"; 电子车标 "ff";
                 int   tagType  ;//类型  0123
                 int str;//实际数据长度
                 try {
                     type=originTagid.substring(0, 2);
                     //过滤掉其他标签
-                    if(type.equals("FE")){
-                        tagType=0;
-                    }else if(type.equals("FC")){
-                        tagType=2;
+                     if(type.equals("FD")){
+                        tagType=1;
                     }else{
                         return;
                     }
