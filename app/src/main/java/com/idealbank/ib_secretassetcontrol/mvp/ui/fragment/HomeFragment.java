@@ -191,25 +191,25 @@ public class HomeFragment extends BaseFragment<HomePresenter> implements HomeCon
         getDate();
     }
 
-//    @Override
-//    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        if (resultCode == Activity.RESULT_OK && requestCode == ScanActivity.REQUEST_CODE_SUCCESS) {
-//
-//            new AppDialog(_mActivity, DialogType.QUERY).setTitle("确定在盘点任务中查资产？").setAsset(data.getStringExtra(ScanActivity.RESULT))
-//                    .setLeftButton("取消", new AppDialog.OnButtonClickListener() {
-//                        @Override
-//                        public void onClick(String val) {
-//                        }
-//                    })
-//                    .setRightButton("确定", new AppDialog.OnButtonClickListener() {
-//                        @Override
-//                        public void onClick(String val) {
-//                            ((MainFragment) getParentFragment()).startBrotherFragment(ScanAssetFragment.newInstance(val));
-//                        }
-//                    })
-//                    .show();
-//
-//        }
-//    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == Activity.RESULT_OK && requestCode == ScanActivity.REQUEST_CODE_SUCCESS) {
+
+            new AppDialog(_mActivity, DialogType.QUERY).setTitle("确定在盘点任务中查资产？").setAsset(data.getStringExtra(ScanActivity.RESULT))
+                    .setLeftButton("取消", new AppDialog.OnButtonClickListener() {
+                        @Override
+                        public void onClick(String val) {
+                        }
+                    })
+                    .setRightButton("确定", new AppDialog.OnButtonClickListener() {
+                        @Override
+                        public void onClick(String val) {
+                            ((MainFragment) getParentFragment()).startBrotherFragment(ScanAssetFragment.newInstance(val));
+                        }
+                    })
+                    .show();
+
+        }
+    }
 }
