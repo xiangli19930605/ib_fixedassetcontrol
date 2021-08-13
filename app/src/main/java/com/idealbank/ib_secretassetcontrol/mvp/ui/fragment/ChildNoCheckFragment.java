@@ -1,8 +1,12 @@
 package com.idealbank.ib_secretassetcontrol.mvp.ui.fragment;
 
 import android.content.Intent;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Message;
+import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -45,6 +49,7 @@ import me.jessyan.armscomponent.commonsdk.utils.EventBusUtils;
 import me.jessyan.armscomponent.commonsdk.utils.ToastUtil;
 import me.jessyan.autosize.utils.LogUtils;
 
+import static android.content.Context.VIBRATOR_SERVICE;
 import static com.jess.arms.utils.Preconditions.checkNotNull;
 
 
@@ -180,7 +185,12 @@ public class ChildNoCheckFragment extends BaseFragment<ChildNoCheckPresenter> im
                 EventBusUtils.sendEvent(new Event(""), EventBusTags.CHECK);
             }
         }
-
+        //播放提示音并震动
+        Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        Ringtone r = RingtoneManager.getRingtone(_mActivity, notification);
+        r.play();
+        Vibrator vibrator = (Vibrator) _mActivity.getSystemService(VIBRATOR_SERVICE);
+        vibrator.vibrate(1000);
     }
 
 }
